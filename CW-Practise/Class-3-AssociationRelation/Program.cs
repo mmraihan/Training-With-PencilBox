@@ -57,9 +57,6 @@ namespace Class_3_AssociationRelation
                 Price=897.0
             });
 
-
-
-
             string message = aCategory.ConsoleDisplay();
             Console.WriteLine(message);
 

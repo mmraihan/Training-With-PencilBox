@@ -8,12 +8,20 @@ namespace Class_3_AssociationRelation.Models
 {
     public class Product
     {
-        public int Code { get; set; }
+        public Product()
+        {
+            ProductCategory = new Category();
+        }
+        public string Code { get; set; }
         public string Name { get; set; }
+        public double Price { get; set; }
         public string Brand { get; set; }
         public string Type { get; set; }
-        public string Category { get; set; }
-        public int CategoryCode { get; set; }
+
+        //Creating Encapsulation process by creating another class and assignt these propertise
+        //public string Category { get; set; }  
+        //public string CategoryCode { get; set; }
         public DateTime ManufacturingDate { get; set; }
+        public Category ProductCategory { get; set; }
     }
 }

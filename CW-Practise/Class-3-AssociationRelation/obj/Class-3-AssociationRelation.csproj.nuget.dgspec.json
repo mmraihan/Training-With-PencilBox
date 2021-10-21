@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Development\\PencilBox\\CW-Practise\\CW-Practise\\Class-3-AssociationRelation\\Class-3-AssociationRelation.csproj": {}
+    "C:\\Development\\Training-With-PencilBox\\CW-Practise\\Class-3-AssociationRelation\\Class-3-AssociationRelation.csproj": {}
   },
   "projects": {
-    "C:\\Development\\PencilBox\\CW-Practise\\CW-Practise\\Class-3-AssociationRelation\\Class-3-AssociationRelation.csproj": {
+    "C:\\Development\\Training-With-PencilBox\\CW-Practise\\Class-3-AssociationRelation\\Class-3-AssociationRelation.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Development\\PencilBox\\CW-Practise\\CW-Practise\\Class-3-AssociationRelation\\Class-3-AssociationRelation.csproj",
+        "projectUniqueName": "C:\\Development\\Training-With-PencilBox\\CW-Practise\\Class-3-AssociationRelation\\Class-3-AssociationRelation.csproj",
         "projectName": "Class-3-AssociationRelation",
-        "projectPath": "C:\\Development\\PencilBox\\CW-Practise\\CW-Practise\\Class-3-AssociationRelation\\Class-3-AssociationRelation.csproj",
+        "projectPath": "C:\\Development\\Training-With-PencilBox\\CW-Practise\\Class-3-AssociationRelation\\Class-3-AssociationRelation.csproj",
         "packagesPath": "C:\\Users\\Raihan\\.nuget\\packages\\",
-        "outputPath": "C:\\Development\\PencilBox\\CW-Practise\\CW-Practise\\Class-3-AssociationRelation\\obj\\",
+        "outputPath": "C:\\Development\\Training-With-PencilBox\\CW-Practise\\Class-3-AssociationRelation\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Raihan\\AppData\\Roaming\\NuGet\\NuGet.Config",

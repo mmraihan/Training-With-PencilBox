@@ -58,22 +58,9 @@ namespace Class_3_AssociationRelation
             });
 
 
-            string message = "";
-            message += "Catgegory Code: " + aCategory.Code + Environment.NewLine;
-            message += "Catgegory Name: " + aCategory.Name+ Environment.NewLine;
-
-            message += "Product Information of Category......" + Environment.NewLine;
-
-            foreach (Product p in aCategory.Products)
-            {
-                message += "Product Name: " + p.Name + Environment.NewLine;
-                message += "Product Code: " + p.Code + Environment.NewLine;
-                message += "Product Price: " + p.Price + Environment.NewLine;
-                message += "-------------------------------------------------" +Environment.NewLine;
-
-            }
 
 
+            string message = aCategory.ConsoleDisplay();
             Console.WriteLine(message);
 
             Console.ReadKey();

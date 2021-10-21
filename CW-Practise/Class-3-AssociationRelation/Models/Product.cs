@@ -23,5 +23,16 @@ namespace Class_3_AssociationRelation.Models
         //public string CategoryCode { get; set; }
         public DateTime ManufacturingDate { get; set; }
         public Category ProductCategory { get; set; }
+
+
+        public string GetConsoleDisplay()
+        {
+            string message = "";
+            message += "Product Name: " + Name + Environment.NewLine;
+            message += "Product Code: " +Code + Environment.NewLine;
+            message += "Product Price: " +Price + Environment.NewLine;
+
+            return message;
+        }
     }
 }

@@ -1,0 +1,16 @@
+C:\Development\PencilBox\SMECommerce-Console\SMECommerce-Console\bin\Debug\net5.0\SMECommerce-Console.exe
+C:\Development\PencilBox\SMECommerce-Console\SMECommerce-Console\bin\Debug\net5.0\SMECommerce-Console.deps.json
+C:\Development\PencilBox\SMECommerce-Console\SMECommerce-Console\bin\Debug\net5.0\SMECommerce-Console.runtimeconfig.json
+C:\Development\PencilBox\SMECommerce-Console\SMECommerce-Console\bin\Debug\net5.0\SMECommerce-Console.runtimeconfig.dev.json
+C:\Development\PencilBox\SMECommerce-Console\SMECommerce-Console\bin\Debug\net5.0\SMECommerce-Console.dll
+C:\Development\PencilBox\SMECommerce-Console\SMECommerce-Console\bin\Debug\net5.0\ref\SMECommerce-Console.dll
+C:\Development\PencilBox\SMECommerce-Console\SMECommerce-Console\bin\Debug\net5.0\SMECommerce-Console.pdb
+C:\Development\PencilBox\SMECommerce-Console\SMECommerce-Console\obj\Debug\net5.0\SMECommerce-Console.csproj.AssemblyReference.cache
+C:\Development\PencilBox\SMECommerce-Console\SMECommerce-Console\obj\Debug\net5.0\SMECommerce-Console.GeneratedMSBuildEditorConfig.editorconfig
+C:\Development\PencilBox\SMECommerce-Console\SMECommerce-Console\obj\Debug\net5.0\SMECommerce-Console.AssemblyInfoInputs.cache
+C:\Development\PencilBox\SMECommerce-Console\SMECommerce-Console\obj\Debug\net5.0\SMECommerce-Console.AssemblyInfo.cs
+C:\Development\PencilBox\SMECommerce-Console\SMECommerce-Console\obj\Debug\net5.0\SMECommerce-Console.csproj.CoreCompileInputs.cache
+C:\Development\PencilBox\SMECommerce-Console\SMECommerce-Console\obj\Debug\net5.0\SMECommerce-Console.dll
+C:\Development\PencilBox\SMECommerce-Console\SMECommerce-Console\obj\Debug\net5.0\ref\SMECommerce-Console.dll
+C:\Development\PencilBox\SMECommerce-Console\SMECommerce-Console\obj\Debug\net5.0\SMECommerce-Console.pdb
+C:\Development\PencilBox\SMECommerce-Console\SMECommerce-Console\obj\Debug\net5.0\SMECommerce-Console.genruntimeconfig.cache

@@ -10,6 +10,13 @@ namespace SMECommerce_Console.Models
     //pomodoro- Marinara
     // microsot todo
 
+    //class 4
+
+    // inheritence bards
+    //up castng
+
+    // Design Pattern Book Name: Head First Design Patterns
+
     public class Product
     {
         string code;

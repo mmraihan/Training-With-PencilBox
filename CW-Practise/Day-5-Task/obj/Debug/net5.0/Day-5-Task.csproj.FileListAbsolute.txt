@@ -1,0 +1,16 @@
+C:\Development\Training-With-PencilBox\CW-Practise\Day-5-Task\bin\Debug\net5.0\Day-5-Task.exe
+C:\Development\Training-With-PencilBox\CW-Practise\Day-5-Task\bin\Debug\net5.0\Day-5-Task.deps.json
+C:\Development\Training-With-PencilBox\CW-Practise\Day-5-Task\bin\Debug\net5.0\Day-5-Task.runtimeconfig.json
+C:\Development\Training-With-PencilBox\CW-Practise\Day-5-Task\bin\Debug\net5.0\Day-5-Task.runtimeconfig.dev.json
+C:\Development\Training-With-PencilBox\CW-Practise\Day-5-Task\bin\Debug\net5.0\Day-5-Task.dll
+C:\Development\Training-With-PencilBox\CW-Practise\Day-5-Task\bin\Debug\net5.0\ref\Day-5-Task.dll
+C:\Development\Training-With-PencilBox\CW-Practise\Day-5-Task\bin\Debug\net5.0\Day-5-Task.pdb
+C:\Development\Training-With-PencilBox\CW-Practise\Day-5-Task\obj\Debug\net5.0\Day-5-Task.csproj.AssemblyReference.cache
+C:\Development\Training-With-PencilBox\CW-Practise\Day-5-Task\obj\Debug\net5.0\Day-5-Task.GeneratedMSBuildEditorConfig.editorconfig
+C:\Development\Training-With-PencilBox\CW-Practise\Day-5-Task\obj\Debug\net5.0\Day-5-Task.AssemblyInfoInputs.cache
+C:\Development\Training-With-PencilBox\CW-Practise\Day-5-Task\obj\Debug\net5.0\Day-5-Task.AssemblyInfo.cs
+C:\Development\Training-With-PencilBox\CW-Practise\Day-5-Task\obj\Debug\net5.0\Day-5-Task.csproj.CoreCompileInputs.cache
+C:\Development\Training-With-PencilBox\CW-Practise\Day-5-Task\obj\Debug\net5.0\Day-5-Task.dll
+C:\Development\Training-With-PencilBox\CW-Practise\Day-5-Task\obj\Debug\net5.0\ref\Day-5-Task.dll
+C:\Development\Training-With-PencilBox\CW-Practise\Day-5-Task\obj\Debug\net5.0\Day-5-Task.pdb
+C:\Development\Training-With-PencilBox\CW-Practise\Day-5-Task\obj\Debug\net5.0\Day-5-Task.genruntimeconfig.cache

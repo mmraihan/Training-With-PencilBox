@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Development\\PencilBox\\SMECommerce-Console\\SMECommerce-Console\\SMECommerce-Console.csproj",
+      "projectUniqueName": "C:\\Development\\Training-With-PencilBox\\CW\\SMECommerce-Console\\SMECommerce-Console\\SMECommerce-Console.csproj",
       "projectName": "SMECommerce-Console",
-      "projectPath": "C:\\Development\\PencilBox\\SMECommerce-Console\\SMECommerce-Console\\SMECommerce-Console.csproj",
+      "projectPath": "C:\\Development\\Training-With-PencilBox\\CW\\SMECommerce-Console\\SMECommerce-Console\\SMECommerce-Console.csproj",
       "packagesPath": "C:\\Users\\Raihan\\.nuget\\packages\\",
-      "outputPath": "C:\\Development\\PencilBox\\SMECommerce-Console\\SMECommerce-Console\\obj\\",
+      "outputPath": "C:\\Development\\Training-With-PencilBox\\CW\\SMECommerce-Console\\SMECommerce-Console\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Raihan\\AppData\\Roaming\\NuGet\\NuGet.Config",

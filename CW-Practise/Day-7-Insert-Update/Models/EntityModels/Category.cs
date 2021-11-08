@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace Day_7_Insert_Update.Models.EntityModels
 {
-    class Category
+   public  class Category
     {
+        public int Id { get; set; }
+        public string Name { get; set; }
+
     }
 }

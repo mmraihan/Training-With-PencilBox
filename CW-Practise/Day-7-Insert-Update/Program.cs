@@ -8,32 +8,45 @@ namespace Day_7_Insert_Update
     {
         static void Main(string[] args)
         {
-            Category category = new Category()
-            {
-                Name ="Furnitures"
-
-            };
-            Category category2 = new Category()
-            {
-                Name = "Electronics"
-            };
-            Category category3 = new Category()
-            {
-                Name = "Clothes"
-            };
-
             SMECommerceDbContext db = new SMECommerceDbContext();
 
-            db.Categories.Add(category);
-            db.Categories.Add(category2); //Tracking all command
-            db.Categories.Add(category3); //Tracking all command
 
-            int successCount= db.SaveChanges(); //Finalyy hited in database
+            #region Inser Data
 
-            if (successCount>0)
+            /*
+            var categories = new[]
+          {
+                new Category(){Name="Sports"},
+                new Category(){Name="Foods"},
+                new Category(){Name="Shoes"},
+                new Category(){Name="Vegetables"},
+            };
+
+
+            db.Categories.AddRange(categories);    //Tracking all command
+
+            int successCount = db.SaveChanges(); //Finalyy hited in database
+
+            if (successCount > 0)
             {
                 Console.WriteLine($"Data saved successfully. Success Count: {successCount}");
             }
+
+            */
+            #endregion
+
+
+            #region Read Data
+
+            var categories = db.Categories;
+            int i = 0;
+            foreach (var item in categories)
+            {
+                Console.WriteLine($"S/N: {++i},  Id: {item.Id}, Name: {item.Name}");
+            }
+
+
+            #endregion
             Console.ReadKey();
         }
     }

@@ -1,6 +1,7 @@
 ﻿using Day_7_Insert_Update.Database;
 using Day_7_Insert_Update.Models.EntityModels;
 using System;
+using System.Linq;
 
 namespace Day_7_Insert_Update
 {
@@ -47,6 +48,24 @@ namespace Day_7_Insert_Update
 
 
             #endregion
+
+          
+
+            #region Read data by id
+            Console.WriteLine("Getting an oject");
+
+            var id = int.Parse(Console.ReadLine());
+
+
+            var category = db.Categories.FirstOrDefault(c => c.Id == id);
+            Console.WriteLine($"Category Details:  Id: {category.Id}, Name: {category.Name}");
+            #endregion
+
+
+            #region Update Data
+
+            #endregion
+
             Console.ReadKey();
         }
     }

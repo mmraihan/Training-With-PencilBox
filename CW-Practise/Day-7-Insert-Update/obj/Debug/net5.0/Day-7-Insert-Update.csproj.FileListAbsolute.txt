@@ -58,7 +58,6 @@ C:\Development\Training-With-PencilBox\CW-Practise\Day-7-Insert-Update\obj\Debug
 C:\Development\Training-With-PencilBox\CW-Practise\Day-7-Insert-Update\obj\Debug\net5.0\Day-7-Insert-Update.AssemblyInfoInputs.cache
 C:\Development\Training-With-PencilBox\CW-Practise\Day-7-Insert-Update\obj\Debug\net5.0\Day-7-Insert-Update.AssemblyInfo.cs
 C:\Development\Training-With-PencilBox\CW-Practise\Day-7-Insert-Update\obj\Debug\net5.0\Day-7-Insert-Update.csproj.CoreCompileInputs.cache
-C:\Development\Training-With-PencilBox\CW-Practise\Day-7-Insert-Update\obj\Debug\net5.0\Day-7-Insert-Update.csproj.CopyComplete
 C:\Development\Training-With-PencilBox\CW-Practise\Day-7-Insert-Update\obj\Debug\net5.0\Day-7-Insert-Update.dll
 C:\Development\Training-With-PencilBox\CW-Practise\Day-7-Insert-Update\obj\Debug\net5.0\ref\Day-7-Insert-Update.dll
 C:\Development\Training-With-PencilBox\CW-Practise\Day-7-Insert-Update\obj\Debug\net5.0\Day-7-Insert-Update.pdb

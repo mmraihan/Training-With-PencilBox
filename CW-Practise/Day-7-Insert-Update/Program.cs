@@ -64,7 +64,26 @@ namespace Day_7_Insert_Update
 
             #region Update Data
 
+            Console.WriteLine("Change the name to: ");
+
+            string newName = Console.ReadLine();
+
+            category.Name = newName;
+
+            int successCount = db.SaveChanges();
+
+            if (successCount>0)
+            {
+                Console.WriteLine($"Data Updated Successfully! Success Count {successCount}");
+            }
+
+
             #endregion
+
+            foreach (var item in categories)
+            {
+                Console.WriteLine($"Id: {item.Id}, Name: {item.Name}");
+            }
 
             Console.ReadKey();
         }

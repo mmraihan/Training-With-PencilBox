@@ -54,17 +54,17 @@ namespace Day_7_Insert_Update
             var id = int.Parse(Console.ReadLine());
 
             #region Read data by id
-            /*
+      
    
             var category = db.Categories.FirstOrDefault(c => c.Id == id);
           
             Console.WriteLine($"Category Details:  Id: {category.Id}, Name: {category.Name}");
-            */
+            
             #endregion
 
 
             #region Update Data
-            /*
+           
 
             Console.WriteLine("Change the name to: ");
 
@@ -79,24 +79,13 @@ namespace Day_7_Insert_Update
                 Console.WriteLine($"Data Updated Successfully! Success Count {successCount}");
             }
 
-            */
+       
 
             #endregion
 
 
 
-            #region Delete by Id
-
-            var category2 = db.Categories.Where(d => d.Id == id).FirstOrDefault();
-
-            db.Categories.Remove(category2);
-            int count=db.SaveChanges();
-            if (count>0)
-            {
-                Console.WriteLine("Data deleted successfully");
-            }
-
-            #endregion
+         
             foreach (var item in categories)
             {
                 Console.WriteLine($"Id: {item.Id}, Name: {item.Name}");

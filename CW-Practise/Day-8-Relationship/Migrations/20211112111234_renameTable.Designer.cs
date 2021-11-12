@@ -4,14 +4,16 @@ using Day_8_Relationship.Database;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Day_8_Relationship.Migrations
 {
     [DbContext(typeof(SMECommerceDbContext))]
-    partial class SMECommerceDbContextModelSnapshot : ModelSnapshot
+    [Migration("20211112111234_renameTable")]
+    partial class renameTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

@@ -66,9 +66,11 @@ namespace Day_8_Relationship.Migrations
 
             modelBuilder.Entity("Day_8_Relationship.Models.EntityModels.Item", b =>
                 {
-                    b.HasOne("Day_8_Relationship.Models.EntityModels.Category", null)
+                    b.HasOne("Day_8_Relationship.Models.EntityModels.Category", "Category")
                         .WithMany("Items")
                         .HasForeignKey("CategoryId");
+
+                    b.Navigation("Category");
                 });
 
             modelBuilder.Entity("Day_8_Relationship.Models.EntityModels.Category", b =>

@@ -14,6 +14,8 @@ namespace Day_8_Relationship.Models.EntityModels
         public string Name { get; set; }
         public DateTime ManufacturerDate { get; set; }
         public double Price { get; set; }
+        public Category Category { get; set; }
+
 
 
 

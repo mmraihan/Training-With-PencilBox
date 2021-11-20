@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "hTIGLSgtW402tCeQv1qZ0Yczu7uikEId7juB3sGPt7Gf2qIm6jYDNIyhmLb329zcVPWd9VDzS8IbU7Ix/2PArg==",
+  "dgSpecHash": "7qtzrnm0fRybMdunsR+5FkmmKVQYX42lHXL8M9Kk74FXAk4XGZ5zrGqHVu8hc4V3HazD85gzEiNc3a4TfYgOiA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Raihan\\Desktop\\Practice-Class\\ClassPractice-04\\ClassPractice-04\\ClassPractice-04.csproj",
+  "projectFilePath": "C:\\Development\\Training-With-PencilBox\\Daily-Tasks\\Class Practise-04\\ClassPractice-04\\ClassPractice-04\\ClassPractice-04.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Raihan\\.nuget\\packages\\castle.core\\4.4.1\\castle.core.4.4.1.nupkg.sha512",
     "C:\\Users\\Raihan\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",

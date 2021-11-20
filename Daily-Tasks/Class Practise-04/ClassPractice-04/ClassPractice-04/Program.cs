@@ -89,12 +89,12 @@ namespace ClassPractice_04
             #region Insert Data one to many
             db.Brands.AddRange(listOfbrands);
 
-            int successCount = db.SaveChanges();
+            //int successCount = db.SaveChanges();
 
-            if (successCount > 0)
-            {
-                Console.WriteLine($"Data saved successfully. Success Count: {successCount}");
-            }
+            //if (successCount > 0)
+            //{
+            //    Console.WriteLine($"Data saved successfully. Success Count: {successCount}");
+            //}
             #endregion
 
 

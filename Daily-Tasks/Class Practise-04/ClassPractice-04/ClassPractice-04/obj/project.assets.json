@@ -7448,11 +7448,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Raihan\\Desktop\\Practice-Class\\ClassPractice-04\\ClassPractice-04\\ClassPractice-04.csproj",
+      "projectUniqueName": "C:\\Development\\Training-With-PencilBox\\Daily-Tasks\\Class Practise-04\\ClassPractice-04\\ClassPractice-04\\ClassPractice-04.csproj",
       "projectName": "ClassPractice-04",
-      "projectPath": "C:\\Users\\Raihan\\Desktop\\Practice-Class\\ClassPractice-04\\ClassPractice-04\\ClassPractice-04.csproj",
+      "projectPath": "C:\\Development\\Training-With-PencilBox\\Daily-Tasks\\Class Practise-04\\ClassPractice-04\\ClassPractice-04\\ClassPractice-04.csproj",
       "packagesPath": "C:\\Users\\Raihan\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Raihan\\Desktop\\Practice-Class\\ClassPractice-04\\ClassPractice-04\\obj\\",
+      "outputPath": "C:\\Development\\Training-With-PencilBox\\Daily-Tasks\\Class Practise-04\\ClassPractice-04\\ClassPractice-04\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Raihan\\AppData\\Roaming\\NuGet\\NuGet.Config",

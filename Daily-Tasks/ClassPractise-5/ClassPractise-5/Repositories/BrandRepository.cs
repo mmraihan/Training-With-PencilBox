@@ -11,7 +11,7 @@ namespace ClassPractise_5.Repositories
 {
    public class BrandRepository
     {
-        SMEDbContext db;
+       SMEDbContext db;
         public BrandRepository()
         {
             db = new SMEDbContext();
@@ -20,31 +20,27 @@ namespace ClassPractise_5.Repositories
         public bool Add(Brand brand)
         {
             db.Brands.Add(brand);
-            int successCount = db.SaveChanges();
-            return successCount > 0;
+            return Save();
         }
 
         public bool Add(List<Brand> brands)
         {
             db.Brands.AddRange(brands);
-            int successCount = db.SaveChanges();
-            return successCount > 0;
+            return Save();
         }
 
 
         public bool Update(Brand brand)
         {
             db.Brands.Update(brand);
-            int successCount = db.SaveChanges();
-            return successCount > 0;
+            return Save();
 
         }
 
         public bool Remove(Brand brand)
         {
             db.Brands.Remove(brand);
-            int successCount = db.SaveChanges();
-            return successCount > 0;
+            return Save();
         }
 
         public Brand GetById(int id)
@@ -56,5 +52,13 @@ namespace ClassPractise_5.Repositories
         {
             return db.Brands.Include(c =>c.Items).ToList();
         }
+
+        public bool Save()
+        {
+           return db.SaveChanges ()>0;
+        }
+
+
+
     }
 }

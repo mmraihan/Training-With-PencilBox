@@ -11,9 +11,9 @@ namespace ClassPractise_5
         static void Main(string[] args)
         {
             BrandRepository brandRepository = new BrandRepository();
-
-
-
+            
+       
+     
             #region All Items
 
 
@@ -89,7 +89,7 @@ namespace ClassPractise_5
 
 
             #region Insert Data one to many
-            //brandRepository.Add(listOfbrands);
+           // brandRepository.Add(listOfbrands);
             #endregion
 
 
@@ -108,6 +108,8 @@ namespace ClassPractise_5
                 }
             }
             #endregion
+
+       
 
 
 

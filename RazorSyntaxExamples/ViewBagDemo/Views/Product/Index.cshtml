@@ -1,10 +1,21 @@
 ﻿@ViewData["name"]
 
+<h1>---Collection passing type Casting---</h1>
 
 
-@{ 
-    foreach (var item in (List<string>) ViewData["names"]) /* Collection passing with type Casting*/
+@{
+    foreach (var item in (List<string>)ViewData["names"]) /* Collection passing with type Casting*/
     {
-        <h1>@item</h1>
+        <p>@item</p>
     }
+}
+@*/* Collection passing from models type Casting*/*@
+
+<h1>---Collection passing from models type Casting---</h1>
+
+@{var productNae = (ViewBagDemo.Models.Product)ViewData["prpductName"];
+
+    <p> @productNae.Id</p>
+    <p> @productNae.Name</p>
+    <p> @productNae.Category</p>
 }

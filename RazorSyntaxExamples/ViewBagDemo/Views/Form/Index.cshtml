@@ -1,0 +1,46 @@
+﻿@*Import Model asp-for="Name" which is prperty*@
+
+@model ViewBagDemo.Models.FormEmployee
+
+
+<h1>Form TagHelper</h1>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-4 mx-auto">
+            <form asp-action="Index" asp-controller="Form" method="post">
+                <input asp-for="Name" placeholder="Enter Your Name" class="form-control" />
+                <br />
+
+                <select asp-for="Gender" class="form-control" asp-items="Html.GetEnumSelectList<Gender>()">
+                    <option value="">Select Gender</option>
+
+                </select>
+
+                <br />
+                <input asp-for="Age" placeholder="Enter Your Age" class="form-control" />
+                <br />
+
+                <input asp-for="Designation" placeholder="Enter Your Designation" class="form-control" />
+                <br />
+                <input asp-for="Salary" placeholder="Enter Your Salary" class="form-control" />
+                <br />
+                <label>Married: </label>
+                <br />
+                <label>Yes</label>
+                <input type="radio" asp-for="Married" value="Yes" />
+
+                <label>No</label>
+                <input type="radio" asp-for="Married" value="No" />
+
+                <br />
+                <input type="submit" name="name" value="Submit" class="btn btn-primary btn-block" />
+            </form>
+        </div>
+    </div>
+ 
+  
+
+</div>
+

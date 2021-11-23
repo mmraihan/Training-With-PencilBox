@@ -40,3 +40,4 @@ C:\Development\Training-With-PencilBox\RazorSyntaxExamples\ViewBagDemo\obj\Debug
 C:\Development\Training-With-PencilBox\RazorSyntaxExamples\ViewBagDemo\obj\Debug\net5.0\ViewBagDemo.csproj.AssemblyReference.cache
 C:\Development\Training-With-PencilBox\RazorSyntaxExamples\ViewBagDemo\obj\Debug\net5.0\Razor\Views\Product\Index.cshtml.g.cs
 C:\Development\Training-With-PencilBox\RazorSyntaxExamples\ViewBagDemo\obj\Debug\net5.0\Razor\Views\ViewBag\Index.cshtml.g.cs
+C:\Development\Training-With-PencilBox\RazorSyntaxExamples\ViewBagDemo\obj\Debug\net5.0\Razor\Views\Form\Index.cshtml.g.cs

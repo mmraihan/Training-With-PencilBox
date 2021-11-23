@@ -22,7 +22,7 @@ namespace SMECommerceApp.Controllers
         //https://localhost:44397/category/CategoryListCreate?
         //categories[0].name=Furniture&categories[0].code=101&categories[1].name=Electronics&categories[1].code=102
         #endregion
-
+        //List Binding
         public string CategoryListCreate(CategoryCreate[] categories)
         {
 

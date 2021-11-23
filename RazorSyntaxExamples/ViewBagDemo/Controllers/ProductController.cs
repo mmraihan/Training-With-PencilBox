@@ -11,6 +11,14 @@ namespace ViewBagDemo.Controllers
         public IActionResult Index()
         {
             ViewData["name"] = "I am from ViewData";
+            ViewData["names"] = new List<string>()
+            {
+                "Mahin","Raihan","Sahik"
+            };
+
+
+
+
             return View();
         }
     }

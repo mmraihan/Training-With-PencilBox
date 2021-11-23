@@ -1,1 +1,10 @@
 ﻿@ViewData["name"]
+
+
+
+@{ 
+    foreach (var item in (List<string>) ViewData["names"]) /* Collection passing with type Casting*/
+    {
+        <h1>@item</h1>
+    }
+}

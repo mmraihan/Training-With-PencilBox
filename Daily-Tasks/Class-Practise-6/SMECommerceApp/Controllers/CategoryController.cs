@@ -1,4 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using SMECommerce.Databases.DbContexts;
+using SMECommerce.Models.EntityModels;
+using SMECommerce.Repositories;
 using SMECommerceApp.Models.CategoryModel;
 using System;
 using System.Collections.Generic;
@@ -13,19 +16,35 @@ namespace SMECommerceApp.Controllers
         {
             return "Welcome to Category Controller";
         }
- 
-    
+
+        public IActionResult Create()
+        {
+            return View();
+        }
+
+
+        [HttpPost]
         public IActionResult Create(CategoryCreate categoryCreate)
         {
-            if (categoryCreate.CategoryName!=null)
+            CategoryRepository categoryRepository = new CategoryRepository();
+            if (categoryCreate.Name!=null)
             {
-                return View("Success");
+                var category = new Category()
+                {
+                    Name = categoryCreate.Name,
+                    Code=categoryCreate.Code,
+                    Description = categoryCreate.Description,
+
+                };
+                var isAdded = categoryRepository.Add(category);
+                if (isAdded)
+                {
+                    return View("Success");
+                }
             }
             return View();
         }
   
-      
-
-
+  
     }
 }

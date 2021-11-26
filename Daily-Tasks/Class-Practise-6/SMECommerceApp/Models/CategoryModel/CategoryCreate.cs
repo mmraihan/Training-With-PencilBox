@@ -3,12 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace SMECommerceApp.Models.CatgoryModel
+namespace SMECommerceApp.Models.CategoryModel
 {
-    public class Category
+    public class CategoryCreate
     {
-        public int Id { get; set; }
+        public string Code { get; set; }
         public string CategoryName { get; set; }
-        
     }
 }

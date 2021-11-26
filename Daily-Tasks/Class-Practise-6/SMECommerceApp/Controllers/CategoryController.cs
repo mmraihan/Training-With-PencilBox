@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using SMECommerceApp.Models.CatgoryModel;
+using SMECommerceApp.Models.CategoryModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,11 +13,18 @@ namespace SMECommerceApp.Controllers
         {
             return "Welcome to Category Controller";
         }
-
-        public string Create(Category category)
+ 
+    
+        public IActionResult Create(CategoryCreate categoryCreate)
         {
-            return $"Category Id {category.Id}, Category Name: {category.CategoryName}";
+            if (categoryCreate.CategoryName!=null)
+            {
+                return View("Success");
+            }
+            return View();
         }
+  
+      
 
 
     }

@@ -1,0 +1,32 @@
+﻿@using SMECommerce.Models.EntityModels
+@{ 
+    List<Category> listOfCategory = ViewBag.categoryList;
+    int serial = 0;
+}
+
+<table class="table">
+    <h1>List of Category</h1> <br />
+
+    <thead>
+        <tr>
+            <th scope="col">SL </th>
+            <th scope="col">Category Code </th>
+            <th scope="col">Category Name</th>
+            <th scope="col">Category Description</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var item in listOfCategory)
+        {
+        <tr>
+            <td>@(++serial)</td>
+            <td>@item.Code</td>
+            <td>@item.Name</td>
+            <td>@item.Description</td>
+        </tr>
+        }
+
+        
+    </tbody>
+</table>

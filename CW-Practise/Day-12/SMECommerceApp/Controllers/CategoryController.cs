@@ -12,6 +12,12 @@ namespace SMECommerceApp.Controllers
 {
     public class CategoryController : Controller
     {
+        private readonly CategoryRepository _categoryRepository;
+        public CategoryController()
+        {
+            _categoryRepository = new CategoryRepository();
+        }
+
         public string Index()
         {
             return "Welcome to Category Controller";
@@ -21,7 +27,6 @@ namespace SMECommerceApp.Controllers
         {
             return View();
         }
-
 
         [HttpPost]
         public IActionResult Create(CategoryCreate categoryCreate)
@@ -44,7 +49,29 @@ namespace SMECommerceApp.Controllers
             }
             return View();
         }
+
+        public IActionResult List()
+        {
+            var listOfCategoy = _categoryRepository.GetAll();
+
+            #region Send data to View via ViewBag (loosely typed)
   
+            ViewBag.listOfCategory = listOfCategoy;
+
+            #endregion
+
+            #region passing data to View via ViewData (loosely typed)
+
+            ViewData["categoryList"] = listOfCategoy;
+
+            #endregion
+
+
+            return View();
+          
+
+
+        }
   
     }
 }

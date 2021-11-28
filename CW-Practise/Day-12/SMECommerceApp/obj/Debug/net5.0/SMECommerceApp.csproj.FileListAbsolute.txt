@@ -430,3 +430,4 @@ C:\Development\Training-With-PencilBox\CW-Practise\Day-12\SMECommerceApp\obj\Deb
 C:\Development\Training-With-PencilBox\CW-Practise\Day-12\SMECommerceApp\obj\Debug\net5.0\ref\SMECommerceApp.dll
 C:\Development\Training-With-PencilBox\CW-Practise\Day-12\SMECommerceApp\obj\Debug\net5.0\SMECommerceApp.pdb
 C:\Development\Training-With-PencilBox\CW-Practise\Day-12\SMECommerceApp\obj\Debug\net5.0\SMECommerceApp.genruntimeconfig.cache
+C:\Development\Training-With-PencilBox\CW-Practise\Day-12\SMECommerceApp\obj\Debug\net5.0\Razor\Views\Category\List.cshtml.g.cs

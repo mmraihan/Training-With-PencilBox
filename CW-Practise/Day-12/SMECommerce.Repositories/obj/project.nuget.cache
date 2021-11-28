@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ep7LGA4v0c+/TRJ0WHM+IEzVMv08kPiRfeTbifzJnq7u+8duStBCOhhzJ1s0W7WBKGMlQRYOkB4wWQEi2LF6Dw==",
+  "dgSpecHash": "sZhv+UHGf7cTNfpdshRgQDzKlj92mGeSfdAvXR6SRabx0PHIxHxJ5w4S0KYmv9ItahkrarJ3IGn3+L8svpLBbw==",
   "success": true,
-  "projectFilePath": "C:\\Development\\Training-With-PencilBox\\CW-Practise\\Day-11\\SMECommerce.Repositories\\SMECommerce.Repositories.csproj",
+  "projectFilePath": "C:\\Development\\Training-With-PencilBox\\CW-Practise\\Day-12\\SMECommerce.Repositories\\SMECommerce.Repositories.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Raihan\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Raihan\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

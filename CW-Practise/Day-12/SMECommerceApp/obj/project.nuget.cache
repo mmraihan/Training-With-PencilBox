@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "G7CWbMiWn3rtIF9dPbyTm6//kh4JSYBgsRdT+UkOswGQ0qBR6XTEa3+9/60cDjcA3XusDrquFkmgbr7PAyRPpg==",
+  "dgSpecHash": "chEdxQAyLbH0J04847dgK7N7+a4+kjOPgh1siWEi91U3fLd1ZZD0mbRansqQSH2zc8Ocma1BZJHIJEFJlIwXnQ==",
   "success": true,
-  "projectFilePath": "C:\\Development\\Training-With-PencilBox\\CW-Practise\\Day-11\\SMECommerceApp\\SMECommerceApp.csproj",
+  "projectFilePath": "C:\\Development\\Training-With-PencilBox\\CW-Practise\\Day-12\\SMECommerceApp\\SMECommerceApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Raihan\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Raihan\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",

@@ -7213,11 +7213,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Development\\Training-With-PencilBox\\CW-Practise\\Day-11\\SMECommerceApp\\SMECommerceApp.csproj",
+      "projectUniqueName": "C:\\Development\\Training-With-PencilBox\\CW-Practise\\Day-12\\SMECommerceApp\\SMECommerceApp.csproj",
       "projectName": "SMECommerceApp",
-      "projectPath": "C:\\Development\\Training-With-PencilBox\\CW-Practise\\Day-11\\SMECommerceApp\\SMECommerceApp.csproj",
+      "projectPath": "C:\\Development\\Training-With-PencilBox\\CW-Practise\\Day-12\\SMECommerceApp\\SMECommerceApp.csproj",
       "packagesPath": "C:\\Users\\Raihan\\.nuget\\packages\\",
-      "outputPath": "C:\\Development\\Training-With-PencilBox\\CW-Practise\\Day-11\\SMECommerceApp\\obj\\",
+      "outputPath": "C:\\Development\\Training-With-PencilBox\\CW-Practise\\Day-12\\SMECommerceApp\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Raihan\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -7234,11 +7234,11 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Development\\Training-With-PencilBox\\CW-Practise\\Day-11\\SMECommerce.Databases\\SMECommerce.Databases.csproj": {
-              "projectPath": "C:\\Development\\Training-With-PencilBox\\CW-Practise\\Day-11\\SMECommerce.Databases\\SMECommerce.Databases.csproj"
+            "C:\\Development\\Training-With-PencilBox\\CW-Practise\\Day-12\\SMECommerce.Databases\\SMECommerce.Databases.csproj": {
+              "projectPath": "C:\\Development\\Training-With-PencilBox\\CW-Practise\\Day-12\\SMECommerce.Databases\\SMECommerce.Databases.csproj"
             },
-            "C:\\Development\\Training-With-PencilBox\\CW-Practise\\Day-11\\SMECommerce.Repositories\\SMECommerce.Repositories.csproj": {
-              "projectPath": "C:\\Development\\Training-With-PencilBox\\CW-Practise\\Day-11\\SMECommerce.Repositories\\SMECommerce.Repositories.csproj"
+            "C:\\Development\\Training-With-PencilBox\\CW-Practise\\Day-12\\SMECommerce.Repositories\\SMECommerce.Repositories.csproj": {
+              "projectPath": "C:\\Development\\Training-With-PencilBox\\CW-Practise\\Day-12\\SMECommerce.Repositories\\SMECommerce.Repositories.csproj"
             }
           }
         }

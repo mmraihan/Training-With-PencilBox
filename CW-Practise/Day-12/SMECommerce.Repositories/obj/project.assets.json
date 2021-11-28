@@ -7290,11 +7290,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Development\\Training-With-PencilBox\\CW-Practise\\Day-11\\SMECommerce.Repositories\\SMECommerce.Repositories.csproj",
+      "projectUniqueName": "C:\\Development\\Training-With-PencilBox\\CW-Practise\\Day-12\\SMECommerce.Repositories\\SMECommerce.Repositories.csproj",
       "projectName": "SMECommerce.Repositories",
-      "projectPath": "C:\\Development\\Training-With-PencilBox\\CW-Practise\\Day-11\\SMECommerce.Repositories\\SMECommerce.Repositories.csproj",
+      "projectPath": "C:\\Development\\Training-With-PencilBox\\CW-Practise\\Day-12\\SMECommerce.Repositories\\SMECommerce.Repositories.csproj",
       "packagesPath": "C:\\Users\\Raihan\\.nuget\\packages\\",
-      "outputPath": "C:\\Development\\Training-With-PencilBox\\CW-Practise\\Day-11\\SMECommerce.Repositories\\obj\\",
+      "outputPath": "C:\\Development\\Training-With-PencilBox\\CW-Practise\\Day-12\\SMECommerce.Repositories\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Raihan\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -7311,8 +7311,8 @@
         "netstandard2.1": {
           "targetAlias": "netstandard2.1",
           "projectReferences": {
-            "C:\\Development\\Training-With-PencilBox\\CW-Practise\\Day-11\\SMECommerce.Databases\\SMECommerce.Databases.csproj": {
-              "projectPath": "C:\\Development\\Training-With-PencilBox\\CW-Practise\\Day-11\\SMECommerce.Databases\\SMECommerce.Databases.csproj"
+            "C:\\Development\\Training-With-PencilBox\\CW-Practise\\Day-12\\SMECommerce.Databases\\SMECommerce.Databases.csproj": {
+              "projectPath": "C:\\Development\\Training-With-PencilBox\\CW-Practise\\Day-12\\SMECommerce.Databases\\SMECommerce.Databases.csproj"
             }
           }
         }

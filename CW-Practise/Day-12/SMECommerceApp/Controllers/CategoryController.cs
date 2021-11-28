@@ -54,24 +54,37 @@ namespace SMECommerceApp.Controllers
         {
             var listOfCategoy = _categoryRepository.GetAll();
 
-            #region Send data to View via ViewBag (loosely typed)
-  
-            ViewBag.listOfCategory = listOfCategoy;
+            #region Send data to View via ViewBag (Weakly typed)
+
+            //ViewBag.listOfCategory = listOfCategoy;
 
             #endregion
 
-            #region passing data to View via ViewData (loosely typed)
+            #region passing data to View via ViewData (Weakly typed)
 
-            ViewData["categoryList"] = listOfCategoy;
+            //ViewData["categoryList"] = listOfCategoy;
 
             #endregion
 
+            #region passing data to View via Model (Strongly Typed)
 
-            return View();
+
+            //return View(listOfCategoy);
+            #endregion
+
+            #region passing data to View via View Model (Strongly Typed with related data)
+            var categoryListVm = new CategoryListVM()
+            {
+                Title = "Category Overview",
+                Description = "You can create,update and delete data from here.",
+                CategorieList = listOfCategoy
+
+            };
+            return View(categoryListVm);
           
-
+            #endregion
 
         }
-  
+
     }
 }

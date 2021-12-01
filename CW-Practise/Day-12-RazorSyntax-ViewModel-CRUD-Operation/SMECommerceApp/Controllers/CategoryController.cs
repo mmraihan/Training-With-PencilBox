@@ -31,7 +31,7 @@ namespace SMECommerceApp.Controllers
         [HttpPost]
         public IActionResult Create(CategoryCreate categoryCreate)
         {
-            CategoryRepository categoryRepository = new CategoryRepository();
+           
             if (categoryCreate.Name!=null)
             {
                 var category = new Category()
@@ -41,7 +41,7 @@ namespace SMECommerceApp.Controllers
                     Description = categoryCreate.Description,
 
                 };
-                var isAdded = categoryRepository.Add(category);
+                var isAdded = _categoryRepository.Add(category);
                 if (isAdded)
                 {
                     return RedirectToAction("List");

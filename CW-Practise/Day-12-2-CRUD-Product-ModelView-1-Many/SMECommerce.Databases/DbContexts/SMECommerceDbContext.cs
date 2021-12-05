@@ -16,7 +16,7 @@ namespace SMECommerce.Databases.DbContexts
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            string connectionString = @"Server=(local);Database=Day11TaskSMECommerceDB;Integrated Security=true";
+            string connectionString = "Server=DESKTOP-4BMDG8B;Database=SMEDb;Trusted_Connection=True;MultipleActiveResultSets=True";
             optionsBuilder
                 //.UseLazyLoadingProxies()
                 .UseSqlServer(connectionString);

@@ -1,10 +1,12 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using SMECommerce.Models.EntityModels;
 using SMECommerce.Repositories;
 using SMECommerceApp.Models.ProductModel;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -15,10 +17,12 @@ namespace SMECommerceApp.Controllers
 
         private readonly ProductRepository _productRepository;
         private readonly CategoryRepository _categoryRepository;
-        public ProductController()
+        private readonly IWebHostEnvironment _webHostEnvironment;
+        public ProductController(IWebHostEnvironment webHostEnvironment)
         {
             _productRepository = new ProductRepository();
             _categoryRepository = new CategoryRepository();
+            _webHostEnvironment = webHostEnvironment;
         }
         public IActionResult Index()
         {
@@ -64,15 +68,27 @@ namespace SMECommerceApp.Controllers
         [HttpPost]
         public IActionResult Create(ProductCreateVm model)//Received data from user for inserting at Database
         {
-            if (model.Name!=null)
+            if (model.Photo!=null)
             {
+                var webRootPath = _webHostEnvironment.WebRootPath;
+                var upLoadPath = Path.Combine(webRootPath, @"images\products");
+                var extension = Path.GetExtension(model.Photo.FileName);
+                var fileName = Guid.NewGuid().ToString();
+
+                using (var fileStream = new FileStream(Path.Combine(upLoadPath,fileName+extension), FileMode.Create))
+                {
+                    model.Photo.CopyTo(fileStream);
+                }
+
+
                 Item item = new Item()
                 {
                     Name = model.Name,
                     Description = model.Description,
                     ManufacturerDate = model.ManufacturerDate,
                     Price = model.Price,
-                    CategoryId=model.CategoryId
+                    CategoryId=model.CategoryId,
+                    ImagePath= @"images\products\"+fileName+extension
                 };
 
                 var isAdded = _productRepository.Add(item);
@@ -204,7 +220,8 @@ namespace SMECommerceApp.Controllers
                 ManufactererDate = product.ManufacturerDate,
                 Description = product.Description,
                 CategoryId=(int)product.CategoryId,
-                CategoryName=catName.Name
+                CategoryName=catName.Name,
+                Photo=@"\"+ product.ImagePath
              
             };
 

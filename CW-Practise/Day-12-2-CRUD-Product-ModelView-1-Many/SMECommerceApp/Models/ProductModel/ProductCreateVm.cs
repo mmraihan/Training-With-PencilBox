@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc.Rendering;
+﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using SMECommerce.Models.EntityModels;
 using System;
 using System.Collections.Generic;
@@ -18,6 +19,10 @@ namespace SMECommerceApp.Models.ProductModel
         //-------Select Drop-Down-------------
         public int CategoryId { get; set; }
         public List<SelectListItem> SelectCategoies { get; set; }
+
+        //---------Image----------------
+
+        public IFormFile Photo { get; set; }
 
 
     }

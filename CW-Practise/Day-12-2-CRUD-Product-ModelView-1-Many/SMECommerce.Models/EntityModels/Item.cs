@@ -20,9 +20,11 @@ namespace SMECommerce.Models.EntityModels
         [ForeignKey("Category")]
         public int? CategoryId { get; set; }
 
-       // public Brand Brand { get; set; }
+        // public Brand Brand { get; set; }
 
-       // public int? BrandId { get; set; }
+        // public int? BrandId { get; set; }
+
+        public string ImagePath { get; set; }
 
 
     }

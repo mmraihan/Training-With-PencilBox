@@ -16,6 +16,8 @@ namespace SMECommerceApp.Models.ProductModel
 
         public string CategoryName { get; set; }
 
+        public string Photo { get; set; }
+
 
     }
 }

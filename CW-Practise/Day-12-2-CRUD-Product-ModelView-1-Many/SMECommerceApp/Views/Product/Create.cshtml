@@ -8,11 +8,11 @@
     </div>
     <!-- /.card-header -->
     <!-- form start -->
-    <form method="post">
+    <form method="post" enctype="multipart/form-data">
         <div class="card-body">
             <div class="form-group">
                 <label for="name">Name</label>
-                <input  class="form-control" asp-for="Name" placeholder="Enter Name">
+                <input class="form-control" asp-for="Name" placeholder="Enter Name">
             </div>
 
             <div class="form-group">
@@ -35,8 +35,13 @@
                 <label for="ecode">Category</label>
                 <select asp-for="CategoryId" asp-items="@Model.SelectCategoies" class="form-control" aria-label="Default select example">
                     <option selected>Select Category</option>
-                    
+
                 </select>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="Photo" class="form-label">Choose photo</label>
+                <input class="form-control" asp-for="Photo">
             </div>
 
 
@@ -44,7 +49,7 @@
         <!-- /.card-body -->
 
         <div class="card-footer">
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-primary">Add Product</button>
         </div>
     </form>
 </div>

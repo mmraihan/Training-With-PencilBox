@@ -5,6 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using SMECommerce.App.Configurations;
 using SMECommerce.Databases.DbContexts;
 using SMECommerce.Repositories;
 using SMECommerce.Repositories.Abstractions;
@@ -30,12 +31,7 @@ namespace SMECommerceApp
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
-            services.AddDbContext<SMECommerceDbContext>(c => c.UseSqlServer("Server=DESKTOP-4BMDG8B;Database=SMEDb;Trusted_Connection=True;MultipleActiveResultSets=True"));
-            services.AddTransient<ICategoryRepository, CategoryRepository>();
-            services.AddTransient<ICategoryService, CategoryService>();
-            services.AddTransient<IProductRepository, ProductRepository>();
-            services.AddTransient<IProductService, ProductService>();
-           
+            AppConfiguration.ConfigureServices(services);
 
         }
 

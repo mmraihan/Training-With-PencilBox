@@ -1,0 +1,4 @@
+Day-14
+Repositry-Pattern-With-Base Generic Service Implementation
+Day-15
+Project Folder Update- Abstraction and Configuration

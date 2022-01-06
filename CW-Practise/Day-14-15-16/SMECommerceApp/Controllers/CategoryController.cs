@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using AutoMapper;
+using Microsoft.AspNetCore.Mvc;
 //using SMECommerce.Databases.DbContexts;--- 1
 using SMECommerce.Models.EntityModels;
 //using SMECommerce.Repositories;----------- 2
@@ -15,9 +16,11 @@ namespace SMECommerceApp.Controllers
     public class CategoryController : Controller
     {
         private readonly ICategoryService _categoryService;
-        public CategoryController(ICategoryService categoryService)
+        private readonly IMapper _mapper;
+        public CategoryController(ICategoryService categoryService, IMapper mapper)
         {
             _categoryService = categoryService;
+            _mapper = mapper;
         }
 
         public string Index()
@@ -36,13 +39,17 @@ namespace SMECommerceApp.Controllers
            // CategoryRepository categoryRepository = new CategoryRepository();
             if (categoryCreate.Name!=null)
             {
-                var category = new Category()
-                {
-                    Name = categoryCreate.Name,
-                    Code=categoryCreate.Code,
-                    Description = categoryCreate.Description,
+                //var category = new Category()
+                //{
+                //    Name = categoryCreate.Name,
+                //    Code=categoryCreate.Code,
+                //    Description = categoryCreate.Description,
 
-                };
+                //};
+
+                //---------------------Automapper-----------------
+                var category = _mapper.Map<Category>(categoryCreate);
+
                 var isAdded = _categoryService.Add(category);
                 if (isAdded)
                 {
@@ -117,13 +124,17 @@ namespace SMECommerceApp.Controllers
         {
             if (ModelState.IsValid)
             {
-                var category = new Category()
-                {
-                    Id = model.Id,
-                    Name = model.Name,
-                    Code = model.Code,
-                    Description = model.Description
-                };
+                //var category = new Category()
+                //{
+                //    Id = model.Id,
+                //    Name = model.Name,
+                //    Code = model.Code,
+                //    Description = model.Description
+                //};
+
+                //-------------Automapper-------------
+
+                var category = _mapper.Map<Category>(model);
 
                bool isUpdated= _categoryService.Update(category);
                 if (isUpdated)

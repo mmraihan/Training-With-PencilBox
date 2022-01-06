@@ -19,7 +19,7 @@ namespace SMECommerce.App.Configurations
             services.AddTransient<ICategoryRepository, CategoryRepository>();
             services.AddTransient<ICategoryService, CategoryService>();
             services.AddTransient<IProductRepository, ProductRepository>();
-            services.AddTransient<IProductService, ProductService>();
+            services.AddTransient<IProductService, ProductService>(); 
         }
     }
 }

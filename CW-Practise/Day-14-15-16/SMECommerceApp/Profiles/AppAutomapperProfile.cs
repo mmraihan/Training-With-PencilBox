@@ -14,7 +14,8 @@ namespace SMECommerce.App.Configurations
             CreateMap<CategoryCreate, Category>();
             CreateMap<CategoryEditVM, Category>();
             CreateMap<Category, CategoryCreate>();
-            CreateMap<Category,CategoryEditVM>();           
+            CreateMap<Category,CategoryEditVM>();
+            CreateMap<Category, CategoryResultVM>();
          }
     }
 }

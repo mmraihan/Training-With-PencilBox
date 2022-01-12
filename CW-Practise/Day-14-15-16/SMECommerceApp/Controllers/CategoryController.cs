@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 //using SMECommerce.Databases.DbContexts;--- 1
 using SMECommerce.Models.EntityModels;
@@ -28,6 +29,7 @@ namespace SMECommerceApp.Controllers
             return "Welcome to Category Controller";
         }
 
+        [Authorize]
         public IActionResult Create()
         {
             return View();
@@ -60,6 +62,7 @@ namespace SMECommerceApp.Controllers
             return View();
         }
 
+        [Authorize]
         public IActionResult List()
         {
             var listOfCategoy = _categoryService.GetAll();

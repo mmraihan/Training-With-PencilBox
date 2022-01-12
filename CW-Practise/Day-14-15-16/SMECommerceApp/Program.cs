@@ -22,5 +22,9 @@ namespace SMECommerceApp
                 {
                     webBuilder.UseStartup<Startup>();
                 });
+
+        
+
+
     }
 }

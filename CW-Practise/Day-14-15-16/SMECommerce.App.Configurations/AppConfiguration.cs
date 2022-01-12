@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using SMECommerce.Databases.DbContexts;
 using SMECommerce.Repositories;
@@ -19,7 +20,10 @@ namespace SMECommerce.App.Configurations
             services.AddTransient<ICategoryRepository, CategoryRepository>();
             services.AddTransient<ICategoryService, CategoryService>();
             services.AddTransient<IProductRepository, ProductRepository>();
-            services.AddTransient<IProductService, ProductService>(); 
+            services.AddTransient<IProductService, ProductService>();
+            
+
         }
+          
     }
 }

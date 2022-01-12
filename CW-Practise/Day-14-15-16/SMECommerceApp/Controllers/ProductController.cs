@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Hosting;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using SMECommerce.Models.EntityModels;
@@ -30,6 +31,7 @@ namespace SMECommerceApp.Controllers
             return View();
         }
 
+      [Authorize]
         public IActionResult Create()
         {
 
@@ -102,6 +104,7 @@ namespace SMECommerceApp.Controllers
             return View();
         }
 
+        [Authorize]
         public IActionResult List()
         {
             var productList = _productService.GetAll(); //Received data from Database for passing to User

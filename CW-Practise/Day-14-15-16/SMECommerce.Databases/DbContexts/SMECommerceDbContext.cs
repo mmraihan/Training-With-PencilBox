@@ -1,4 +1,5 @@
 ﻿
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using SMECommerce.Models.EntityModels;
 using System;
@@ -9,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace SMECommerce.Databases.DbContexts
 {
-    public class SMECommerceDbContext:DbContext
+    public class SMECommerceDbContext: IdentityDbContext<ApplicationUser>
     {
         public SMECommerceDbContext(DbContextOptions options): base(options)
         {

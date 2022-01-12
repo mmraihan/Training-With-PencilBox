@@ -1,12 +1,14 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using SMECommerce.App.Configurations;
 using SMECommerce.Databases.DbContexts;
+using SMECommerce.Models.EntityModels;
 using SMECommerce.Repositories;
 using SMECommerce.Repositories.Abstractions;
 using SMECommerce.Services;
@@ -32,7 +34,12 @@ namespace SMECommerceApp
         {
             services.AddControllersWithViews();
             services.AddAutoMapper(typeof(Startup));
+            services.AddIdentity<ApplicationUser, IdentityRole>()
+                .AddEntityFrameworkStores<SMECommerceDbContext>();
             AppConfiguration.ConfigureServices(services); //
+
+            //services.AddScoped<IAccountService, AccountService>();
+            services.AddScoped<IAccountRepository, AccountRepository>();
 
         }
 
@@ -53,7 +60,7 @@ namespace SMECommerceApp
             app.UseStaticFiles();
 
             app.UseRouting();
-
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>

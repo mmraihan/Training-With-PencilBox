@@ -38,8 +38,6 @@ namespace SMECommerceApp
                 .AddEntityFrameworkStores<SMECommerceDbContext>();
             AppConfiguration.ConfigureServices(services); //
 
-            //services.AddScoped<IAccountService, AccountService>();
-            services.AddScoped<IAccountRepository, AccountRepository>();
 
         }
 

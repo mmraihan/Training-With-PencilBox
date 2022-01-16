@@ -1,9 +1,6 @@
-﻿using AutoMapper;
+﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using SMECommerce.Models.EntityModels;
-using SMECommerce.Repositories.Abstractions;
-using SMECommerce.Services.Abstractions;
-using SMECommerceApp.Models.IdentityModel;
 using SMECommerceApp.Models.IdentityModels;
 using System;
 using System.Collections.Generic;
@@ -14,28 +11,41 @@ namespace SMECommerceApp.Controllers
 {
     public class AccountController : Controller
     {
-        private readonly IAccountRepository _accountRepository;
-        
-        private readonly IMapper _mapper;
+        SignInManager<ApplicationUser> _signInManager;//-----User Login
+        UserManager<ApplicationUser> _userManager; //--------User Create
 
-        public AccountController(IAccountRepository accountRepository, IMapper mapper)
+        public AccountController(SignInManager<ApplicationUser> signInManager, UserManager<ApplicationUser> userManager)
         {
-            _accountRepository = accountRepository;
-            _mapper = mapper;
+            _signInManager = signInManager;
+            _userManager = userManager;
         }
+
+
+
 
         public IActionResult Signup()
         {
             return View();
         }
-        
+
+
         [HttpPost]
-        public async Task <IActionResult> Signup(SignUpUserModelVM userModel)
+        public async Task<IActionResult> Signup(SignUpUserModelVM userModel)
         {
+            
+            
             if (ModelState.IsValid)
             {
-                var user = _mapper.Map<SignUpUserModel>(userModel);
-                var newUser = await _accountRepository.CreateUser(user);
+                ApplicationUser applicationUser = new ApplicationUser()
+                {
+                    FirstName = userModel.FirstName,
+                    LastName = userModel.LastName,
+                    Address = userModel.Address,
+                    Email = userModel.Email,
+                    UserName = userModel.Email
+                };
+                var newUser=await _userManager.CreateAsync(applicationUser,userModel.Password);
+               
                 if (!newUser.Succeeded)
                 {
                     foreach (var error in newUser.Errors)
@@ -43,47 +53,45 @@ namespace SMECommerceApp.Controllers
                         ModelState.AddModelError("", error.Description);
                     }
                 }
-                return RedirectToAction("Success");
-                                 
+                return RedirectToAction("Login");
 
             }
-            return View(userModel);
+            return View();
         }
-
 
         public IActionResult Login()
         {
             return View();
         }
 
+
+
         [HttpPost]
         public async Task<IActionResult> Login(SignInUserModelVM signInUserModelVM)
         {
             if (ModelState.IsValid)
             {
-                var user = _mapper.Map<SignInUserModel>(signInUserModelVM);
-                var result = await _accountRepository.SignInUser(user);
-                if (result.Succeeded)
+                var user = await _userManager.FindByEmailAsync(signInUserModelVM.Email);
+                if (user !=null)
                 {
-                    return RedirectToAction("List", "Product");
+                    var result =await _signInManager.PasswordSignInAsync(signInUserModelVM.Email, signInUserModelVM.Password, false,false);
+                    if (result.Succeeded)
+                    {
+                        return RedirectToAction("Index", "Home");
+                    }
+                    ModelState.AddModelError("", "Invalid Account");
                 }
-                ModelState.AddModelError("", "Invalid Account");
+               
             }
-            return View(signInUserModelVM);
+            return View();
         }
 
 
         public async Task<IActionResult> Logout()
         {
-            await _accountRepository.SignOutUser();
+            await _signInManager.SignOutAsync();
+            
             return RedirectToAction("Index", "Home");
         }
-
-
-        public  IActionResult Success()
-        {
-            return View();
-        }
-
     }
 }

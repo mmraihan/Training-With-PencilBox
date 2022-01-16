@@ -10,8 +10,8 @@ using SMECommerce.Databases.DbContexts;
 namespace SMECommerce.Databases.Migrations
 {
     [DbContext(typeof(SMECommerceDbContext))]
-    [Migration("20220111162030_ApplicationUserTable")]
-    partial class ApplicationUserTable
+    [Migration("20220116165326_All")]
+    partial class All
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

@@ -19,7 +19,7 @@ namespace SMECommerceApp.Models.IdentityModels
 
         [Required(ErrorMessage = "Please enter your Address")]
         public string Address { get; set; }
-       
+
 
         [Required(ErrorMessage = "Please enter your email")]
         [Display(Name = "Email Address")]
@@ -39,7 +39,5 @@ namespace SMECommerceApp.Models.IdentityModels
         [DataType(DataType.Password)]
 
         public string ConfirmPassword { get; set; }
-
-
     }
 }

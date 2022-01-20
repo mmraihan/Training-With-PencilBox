@@ -1,10 +1,15 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Configuration;
+using Microsoft.IdentityModel.Tokens;
 using SMECommerce.Models.EntityModels;
 using SMECommerceApp.Models.IdentityModels;
 using System;
 using System.Collections.Generic;
+using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
+using System.Security.Claims;
+using System.Text;
 using System.Threading.Tasks;
 
 namespace SMECommerceApp.Controllers
@@ -13,15 +18,16 @@ namespace SMECommerceApp.Controllers
     {
         SignInManager<ApplicationUser> _signInManager;//-----User Login
         UserManager<ApplicationUser> _userManager; //--------User Create
+        IPasswordHasher<ApplicationUser> _passwordHasher;
+        IConfiguration _config;
 
-        public AccountController(SignInManager<ApplicationUser> signInManager, UserManager<ApplicationUser> userManager)
+        public AccountController(SignInManager<ApplicationUser> signInManager, UserManager<ApplicationUser> userManager, IPasswordHasher<ApplicationUser> passwordHasher, IConfiguration config)
         {
             _signInManager = signInManager;
             _userManager = userManager;
+            _passwordHasher = passwordHasher;
+            _config = config;
         }
-
-
-
 
         public IActionResult Signup()
         {
@@ -92,6 +98,58 @@ namespace SMECommerceApp.Controllers
             await _signInManager.SignOutAsync();
             
             return RedirectToAction("Index", "Home");
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Token([FromBody] SignInUserModelVM model)
+        {
+            var user = await _userManager.FindByNameAsync(model.Email);
+
+            if (user != null)
+            {
+                // verify password 
+
+                var result = _passwordHasher.VerifyHashedPassword(user, user.PasswordHash, model.Password);
+
+                if (result == PasswordVerificationResult.Success)
+                {
+                    // token generate for user. 
+
+                    var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_config["Jwt:Key"]));
+                    var signingCredentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
+
+                    var userClaims = await _userManager.GetClaimsAsync(user);
+
+
+                    var claims = new Claim[]
+                    {
+                        new Claim(JwtRegisteredClaimNames.Sub, user.Id.ToString()),
+                        new Claim(JwtRegisteredClaimNames.GivenName, user.UserName),
+                        new Claim(JwtRegisteredClaimNames.Jti, (new Guid()).ToString())
+
+                    }.Union(userClaims);
+
+
+                    var token = new JwtSecurityToken(
+                        issuer: _config["Jwt:Issuer"],
+                        audience: _config["Jwt:Issuer"],
+                        claims: claims,
+                        expires: DateTime.Now.AddMinutes(120),
+                        signingCredentials: signingCredentials
+                        );
+
+
+                    var tokenString = new JwtSecurityTokenHandler().WriteToken(token);
+
+                    return Ok(new { token = tokenString, expires = token.ValidTo });
+
+                }
+
+
+            }
+
+            return BadRequest("User or Password could not match, please check");
+
         }
     }
 }

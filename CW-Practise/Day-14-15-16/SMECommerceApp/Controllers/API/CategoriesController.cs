@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using SMECommerce.Models.EntityModels;
 using SMECommerce.Services.Abstractions;
@@ -26,6 +27,7 @@ namespace SMECommerceApp.Controllers.API
         }
 
         [HttpGet]
+        [Authorize(AuthenticationSchemes ="Bearer")] //By Default Cookies
         public IActionResult GetCategories()
         {
 

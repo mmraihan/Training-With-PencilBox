@@ -123,13 +123,14 @@ namespace SMECommerceApp.Controllers
 
                     var claims = new Claim[]
                     {
+
                         new Claim(JwtRegisteredClaimNames.Sub, user.Id.ToString()),
                         new Claim(JwtRegisteredClaimNames.GivenName, user.UserName),
                         new Claim(JwtRegisteredClaimNames.Jti, (new Guid()).ToString())
 
                     }.Union(userClaims);
 
-
+                   
                     var token = new JwtSecurityToken(
                         issuer: _config["Jwt:Issuer"],
                         audience: _config["Jwt:Issuer"],

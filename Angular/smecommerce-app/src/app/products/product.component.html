@@ -3,7 +3,10 @@
 <button (click)="toggleProduct()">Toggle Button</button>
 
 
-<div *ngIf='showPrpduct'>
+<div *ngIf="showPrpduct">
+    <span *ngFor="let product of products">
+
+ 
     <img [src]= 'product.imageUrl'>
 
     <p>
@@ -12,4 +15,5 @@
     <p>Product Name: {{product.name}} </p>
     <p>Product Price:{{product.price}}</p>
     <p>Product Code: {{product.code}}</p>
+</span>
 </div>

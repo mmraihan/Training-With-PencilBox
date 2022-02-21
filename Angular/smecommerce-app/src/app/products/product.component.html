@@ -1,10 +1,13 @@
 <h1>-----------Product Component-------------</h1>
 
+<button (click)="toggleProduct()">Toggle Button</button>
 
-<div>
+
+<div *ngIf='showPrpduct'>
     <img [src]= 'product.imageUrl'>
+
     <p>
-        <input type="text" name="product.name" [ngModel]='product.name' placeholder="Provide Your Name"/>
+        <input type="text" name="product.name" [(ngModel)]='product.name' placeholder="Provide Your Name"/>
     </p>
     <p>Product Name: {{product.name}} </p>
     <p>Product Price:{{product.price}}</p>

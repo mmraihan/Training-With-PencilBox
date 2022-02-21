@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -12,7 +13,8 @@ import { ExploreModule } from './explore/explore.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ExploreModule
+    ExploreModule,
+  
 
   ],
   providers: [],

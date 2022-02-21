@@ -1,9 +1,10 @@
 import { NgModule } from "@angular/core";
+import { FormsModule } from "@angular/forms";
 import { ExploreComponent } from "./explore.component";
 
 @NgModule({
     declarations: [ ExploreComponent],
-    imports: [],
+    imports: [FormsModule],
     exports:[ExploreComponent]
 })
 

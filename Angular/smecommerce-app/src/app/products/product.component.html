@@ -1,19 +1,20 @@
-<h1>-----------Product Component-------------</h1>
+<div class="container">
+    <h1>---Product Component---</h1>
 
-<button (click)="toggleProduct()">Toggle Button</button>
-
-
-<div *ngIf="showPrpduct">
-    <span *ngFor="let product of products">
-
- 
-    <img [src]= 'product.imageUrl'>
-
-    <p>
-        <input type="text" name="product.name" [(ngModel)]='product.name' placeholder="Provide Your Name"/>
-    </p>
-    <p>Product Name: {{product.name}} </p>
-    <p>Product Price:{{product.price}}</p>
-    <p>Product Code: {{product.code}}</p>
-</span>
+    <button (click)="toggleProduct()">Toggle Button</button>
+    
+    
+    <div *ngIf="showPrpduct">
+        <span *ngFor="let product of products">
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" [src]='product.imageUrl' [alt]="product.name">
+                <div class="card-body">
+                  <h5 class="card-title">{{product.name | uppercase}}</h5>
+                  <p class="card-text">{{product.price | currency}}</p>
+                  <p class="card-text">{{product.code}}</p>
+                  <a href="#" class="btn btn-primary">Buy</a>
+                </div>
+              </div>
+    </span>
+    </div>
 </div>

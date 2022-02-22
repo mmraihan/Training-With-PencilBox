@@ -1,5 +1,11 @@
 <div class="container">
+    
+    <span>
+        <product-create (onAdded)='addProduct($event)' ></product-create>
+    </span>
+   <br>
     <h1>---Product Component---</h1>
+    <br>
 
     <button class="btn btn-success" (click)="toggleProduct()">Toggle Button</button>
     
@@ -10,4 +16,8 @@
             <product-detail [product]='product'></product-detail>
     </span>
     </div>
+
+
+
 </div>
+

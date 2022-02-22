@@ -37,4 +37,8 @@ export class ProductComponent{
      console.log("Toggle is clicked")
  }
 
+ addProduct(product: any){
+     this.products.push(product);
+ }
+
 }

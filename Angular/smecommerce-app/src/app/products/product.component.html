@@ -1,23 +1,24 @@
 <div class="container">
+    <div>
+        <span>
+            <product-create (onAdded)='addProduct($event)' ></product-create>
+        </span>
+    </div>
     
-    <span>
-        <product-create (onAdded)='addProduct($event)' ></product-create>
-    </span>
-   <br>
-    <h1>---Product Component---</h1>
     <br>
+    <p>
+        <button class="btn btn-success" (click)="toggleProduct()">Toggle Button</button>
+    </p>
 
-    <button class="btn btn-success" (click)="toggleProduct()">Toggle Button</button>
-    
-    
-    <div *ngIf="showPrpduct">
+    <div *ngIf="showPrpduct" class="d-flex flex-wrap">
+
         <span *ngFor="let product of products">
             
             <product-detail [product]='product'></product-detail>
     </span>
     </div>
 
-
+    
 
 </div>
 
